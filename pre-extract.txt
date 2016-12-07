@@ -1,0 +1,19 @@
+
+
+
+Map either IPC$ or C$ on the remote machine using elevated privileges.
+
+Copy "live_extraction.ps1" to the remote machine C:\windows\temp
+ 
+Open command prompt using psexec on remote machine:
+
+"psexec \\remote_machine cmd"
+
+Then run the following command:
+
+C:\Windows\Temp>powershell.exe -ExecutionPolicy Bypass -F "c:\windows\temp\Live-Extraction.ps1"
+
+
+Resulting evidence files will be located in the remote machine C:\windows\temp\%computername%******.html and txt files.
+
+
